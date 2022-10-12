@@ -1,0 +1,353 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>The CrySL Language | CogniCrypt</title>
+<meta property="og:title" content="The CrySL Language | CogniCrypt">
+<meta name=twitter:title content="The CrySL Language | CogniCrypt">
+<meta name=description content="Thanks to Theofilos Petsios from Amazon Web Services for providing a definition file for syntax highlighting for CrySL in VIM. You can download the definitions here.
+Both CogniCryptGEN and CogniCryptSAST are based on CrySL rules that specify the correct use of an application programming interface (API). CrySL is a domain-specific language that allows to specify usage patterns of APIs. CogniCryptGENgenerates code using the rules, CogniCryptSASTin turn reports any deviations from the usage pattern defined within the rules.">
+<meta property="og:description" content="Thanks to Theofilos Petsios from Amazon Web Services for providing a definition file for syntax highlighting for CrySL in VIM. You can download the definitions here.
+Both CogniCryptGEN and CogniCryptSAST are based on CrySL rules that specify the correct use of an application programming interface (API). CrySL is a domain-specific language that allows to specify usage patterns of APIs. CogniCryptGENgenerates code using the rules, CogniCryptSASTin turn reports any deviations from the usage pattern defined within the rules.">
+<meta name=twitter:description content="Thanks to Theofilos Petsios from Amazon Web Services for providing a definition file for syntax highlighting for CrySL in VIM. You can download the definitions here.
+Both CogniCryptGEN and …">
+<meta name=author content="Eclipse Foundation">
+<link href=https://www.eclipse.org/cognicrypt/favicon.ico rel=icon type=image/x-icon>
+<meta name=twitter:card content="summary">
+<meta property="og:url" content="https://www.eclipse.org/cognicrypt/documentation/crysl/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Securely using Cryptography with CogniCrypt">
+<meta name=keywords content>
+<meta name=generator content="Hugo 0.91.2">
+<link rel=canonical href=https://www.eclipse.org/cognicrypt/documentation/crysl/>
+<link rel=alternate href=https://www.eclipse.org/cognicrypt/documentation/crysl/index.xml type=application/rss+xml title="Securely using Cryptography with CogniCrypt">
+<link rel=stylesheet href=https://www.eclipse.org/cognicrypt/assets/css/bootstrap.css>
+<link rel=apple-touch-icon sizes=57x57 href=/apple-icon-57x57.png>
+<link rel=apple-touch-icon sizes=60x60 href=/apple-icon-60x60.png>
+<link rel=apple-touch-icon sizes=72x72 href=/apple-icon-72x72.png>
+<link rel=apple-touch-icon sizes=76x76 href=/apple-icon-76x76.png>
+<link rel=apple-touch-icon sizes=114x114 href=/apple-icon-114x114.png>
+<link rel=apple-touch-icon sizes=120x120 href=/apple-icon-120x120.png>
+<link rel=apple-touch-icon sizes=144x144 href=/apple-icon-144x144.png>
+<link rel=apple-touch-icon sizes=152x152 href=/apple-icon-152x152.png>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-icon-180x180.png>
+<link rel=icon type=image/png sizes=192x192 href=/android-icon-192x192.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=96x96 href=/favicon-96x96.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=manifest href=/manifest.json>
+<meta name=msapplication-TileColor content="#ffffff">
+<meta name=msapplication-TileImage content="/ms-icon-144x144.png">
+<meta name=theme-color content="#ffffff">
+<link href="//fonts.googleapis.com/css?family=Libre+Franklin:400,700,300,600,100" rel=stylesheet type=text/css>
+</head>
+<body>
+<header class=homepage>
+<nav class="navbar navbar-default">
+<div class=container>
+<div class=navbar-header>
+<button type=button class="navbar-toggle collapsed" data-toggle=collapse data-target=#bs-example-navbar-collapse-1>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+</button>
+<a class=navbar-brand href=https://www.eclipse.org/cognicrypt>
+<img alt="Eclipse CogniCrypt" src=https://www.eclipse.org/cognicrypt/assets/images/cognicrypt-logo.png>
+</a>
+</div>
+<div class="collapse navbar-collapse" id=bs-example-navbar-collapse-1>
+<ul class="nav navbar-nav navbar-right">
+<li>
+<a href=/cognicrypt/publications/>
+Publications
+</a>
+</li>
+<li>
+<a href=/cognicrypt/downloads/>
+Downloads
+</a>
+</li>
+<li class=dropdown>
+<a href=# data-toggle=dropdown class=dropdown-toggle>
+<span>Documentation</span>
+<b class=caret></b>
+</a>
+<ul class=dropdown-menu>
+<li><a href=/cognicrypt/documentation/>Introduction & Configuration</a> </li>
+<li><a href=/cognicrypt/documentation/crysl/>CrySL Language</a> </li>
+<li><a href=/cognicrypt/documentation/codegen/>Code Generation</a> </li>
+<li><a href=/cognicrypt/documentation/codeanalysis/>Code Analysis</a> </li>
+</ul>
+</li>
+<li class=dropdown>
+<a href=# data-toggle=dropdown class=dropdown-toggle>
+<span>Contributing</span>
+<b class=caret></b>
+</a>
+<ul class=dropdown-menu>
+<li><a href=/cognicrypt/contributing#bugs>Bugs and Feature Requests</a> </li>
+<li><a href=/cognicrypt/contributing#code>Code Contributions</a> </li>
+<li><a href=/cognicrypt/contributing#prim>Cryptographic Primitives</a> </li>
+<li><a href=/cognicrypt/contributing#tasks>Cryptographic Tasks</a> </li>
+</ul>
+</li>
+<li>
+<a href=/cognicrypt/news/>
+News
+</a>
+</li>
+<li class="dropdown eclipse-more hidden-xs">
+<a data-toggle=dropdown class=dropdown-toggle role=button>More<b class=caret></b></a>
+<ul class=dropdown-menu>
+<li>
+<div class=yamm-content>
+<div class=row>
+<ul class="col-sm-8 list-unstyled">
+<li>
+<p><strong>Community</strong></p>
+</li>
+<li><a href=http://marketplace.eclipse.org>Marketplace</a></li>
+<li><a href=http://events.eclipse.org>Events</a></li>
+<li><a href=http://www.planeteclipse.org/>Planet Eclipse</a></li>
+<li><a href=https://www.eclipse.org/community/eclipse_newsletter/>Newsletter</a></li>
+<li><a href=https://www.youtube.com/user/EclipseFdn>Videos</a></li>
+<li><a href=https://blogs.eclipse.org>Blogs</a></li>
+</ul>
+<ul class="col-sm-8 list-unstyled">
+<li>
+<p><strong>Participate</strong></p>
+</li>
+<li><a href=https://bugs.eclipse.org/bugs/>Report a Bug</a></li>
+<li><a href=https://www.eclipse.org/forums/>Forums</a></li>
+<li><a href=https://www.eclipse.org/mail/>Mailing Lists</a></li>
+<li><a href=https://wiki.eclipse.org/>Wiki</a></li>
+<li><a href=https://wiki.eclipse.org/IRC>IRC</a></li>
+</ul>
+<ul class="col-sm-8 list-unstyled">
+<li>
+<p><strong>Eclipse IDE</strong></p>
+</li>
+<li><a href=https://www.eclipse.org/downloads>Download</a></li>
+<li><a href=https://help.eclipse.org>Documentation</a></li>
+<li><a href=https://www.eclipse.org/getting_started>Getting Started / Support</a></li>
+<li><a href=https://www.eclipse.org/contribute/>How to Contribute</a></li>
+<li><a href=https://www.eclipse.org/ide/>IDE and Tools</a></li>
+<li><a href=https://www.eclipse.org/forums/index.php/f/89/>Newcomer Forum</a></li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li style=min-width:100px;padding-top:12px;padding-left:50px;margin-left:-35px>
+<a href="https://twitter.com/cognicrypt?ref_src=twsrc%5Etfw" class=twitter-follow-button data-show-count=false data-show-screen-name=false></a><script async src=https://platform.twitter.com/widgets.js></script>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class=container>
+<div class=row>
+<div class="col-md-8 col-sm-12">
+<h1><span class=green>Eclipse</span> <span class=green>CogniCrypt</span></h1>
+<p>Eclipse CogniCrypt is an intelligent open-source platform ensuring the secure usage of crypto components.</p>
+</div>
+</div>
+</section>
+</header>
+<main class=main>
+<section class=first>
+<div class=container>
+<div class=row>
+<div class=col-md-10>
+<h3><span class=green>The CrySL Language</span></h3>
+</div>
+</div>
+</div>
+</section>
+<section class=second>
+<div class=container>
+<div class=col-md-10>
+<p>Thanks to Theofilos Petsios from Amazon Web Services for providing a definition file for syntax highlighting for CrySL in VIM. You can download the definitions here.</p>
+<p>Both <a href=/cognicrypt/documentation/codegen>CogniCryptGEN</a> and <a href=/cognicrypt/documentation/codeanalysis>CogniCryptSAST</a> are based on <em>CrySL rules</em> that specify the <em>correct</em> use of an application programming interface (API). <em>CrySL</em> is a domain-specific language that allows to specify usage patterns of APIs. CogniCryptGEN generates code using the rules, CogniCryptSAST in turn reports any deviations from the usage pattern defined within the rules.</p>
+<h2 id=syntax-of-the-domain-specific-language-crysl>Syntax of the Domain-Specific Language CrySL</h2>
+<p>Rules in CogniCrypt are written in <em>CrySL</em>. <em>CrySL</em> is a domain-specific language for the specification of correct cryptography API uses in Java. The Eclipse plugin CogniCrypt ships with an XText editor that supports the <em>CrySL</em> syntax. <em>CrySL</em> generally encodes a white-list approach and specifies how to <em>correctly</em> use crypto APIs. We discuss some of the most important concepts of the rule language here, the <a href=http://drops.dagstuhl.de/opus/volltexte/2018/9215/pdf/LIPIcs-ECOOP-2018-10.pdf>research paper</a> provides more detailed insights on the language. CogniCrypt ships with a default rule set for the <a href=https://docs.oracle.com/en/java/javase/14/security/java-cryptography-architecture-jca-reference-guide.html>Java Cryptographic Architecture (JCA)</a>. At the bottom of this page, you may find a description of this rule set. On top of this rule set, rule sets for <a href=https://www.bouncycastle.org/documentation.html>BouncyCastle</a>, both for its lightweight API as well as JCA provider, and <a href=https://github.com/google/tink>Google Tink</a> are available for download from within the CogniCrypt preferences. Custom rules may also be added.</p>
+<p>Each <em>CrySL</em> rule is a specification of a single Java class. A short example of a <em>CrySL</em> rule for <code>javax.crypto.Cipher</code> is shown below.</p>
+<pre tabindex=0><code>SPEC 	javax.crypto.Cipher
+OBJECTS 
+	java.lang.String trans;
+	byte[] plainText; 
+	java.security.Key key;
+	byte[] cipherText;
+EVENTS 
+	Get: getInstance(trans); 
+	Init: init(encmode, key); 
+	doFinal: cipherText = doFinal(plainText); 
+ORDER 
+	Get, Init, (doFinal)+ 
+CONSTRAINTS  
+	encmode in {1,2,3,4};
+	alg(trans) in {&quot;AES&quot;, ..., &quot;RSA&quot;};
+	alg(trans) in {&quot;AES&quot;} =&gt; mode(trans) in {&quot;CBC&quot;};
+REQUIRES 
+	generatedKey[key, part(0, &quot;/&quot;, trans)];
+ENSURES 
+	encrypted[cipherText, plainText]; 
+</code></pre><p>Each rule has a <code>SPEC</code> clause that lists the fully qualified class name the following specification holds for (in this case <code>javax.crypto.Cipher</code>)
+The <code>SPEC</code> clause is followed by the blocks <code>OBJECTS</code>, <code>EVENTS</code>, <code>ORDER</code>, <code>CONSTRAINTS</code>, <code>REQUIRES</code> and <code>ENSURES</code>.
+Within the <code>CONSTRAINTS</code> block each rule lists <code>Integer</code> and <code>String</code> constraints. The <code>OBJECTS</code> clause lists all variable names that can be used within all blocks of the rule. The <code>EVENTS</code> block lists API method calls that can be made on each <code>Cipher</code> object. When an event is encountered, the actual values of the events parameters are assigned to respective variable name listed in the rule. These parameter values can then be constrained by <code>CONSTRAINTS</code>.</p>
+<h3 id=the-constraints-section>The CONSTRAINTS section</h3>
+<p>The <code>Cipher</code> rule lists <code>encmode in {1,2,3,4};</code> within its <code>CONSTRAINTS</code> block. The value <code>encmode</code> that is passed to method <code>init(encmode, cert)</code> is restricted to be one of the four integers. In other terms, whenever the function <code>init</code> is called, the value passed in as first parameter must be in the respective set. The constraint <code>alg(trans) in {"AES", ..., "RSA"}</code> refers to the fact that at the call to <code>Cipher.getInstance(trans)</code> the <code>String trans</code> must be correctly formed. Hence the constraint restricts the algorithm to be either <code>"AES"</code> or <code>"RSA"</code> through the <code>alg</code> function. The third constraint (<code>alg(trans) in {"AES"} => mode(trans) in {"CBC"};</code>) is a conditional constraint: If the algorithm of <code>trans</code> is <code>"AES"</code>, then the mode of <code>trans</code> must be <code>"CBC"</code>. For example, this conditional rule warns a developer writing <code>Cipher.getInstance("AES/ECB/PKCS5Padding")</code> instead of <code>Cipher.getInstance("AES/CBC/PKCS5Padding")</code>.</p>
+<h3 id=the-order-section>The ORDER section</h3>
+<p>The <code>ORDER</code> section of a rule specifies a regular-expression like description of the expected events to occur on each individual object. For the <code>Cipher</code> rule the order is <code>Get, Init, (doFinal)+</code>. The terms <code>Get</code>, <code>Init</code> and <code>doFinal</code> are labels and group a set of API methods that are defined within the <code>EVENTS</code> block. The regular expression stated in the <code>ORDER</code> section enforces the following order on a <code>Cipher</code> object: The object must be create by a <code>Get</code>, i.e., <code>Cipher.getInstance</code>, call, then <code>Init</code> must be called before, eventually, the method <code>doFinal</code> is called. A programmer who writes the program below contradicts the <code>ORDER</code> section of the <code>CrySL</code> rule: A call to <code>init</code> on the <code>cipher</code> object is missing between the <code>getInstance</code> and <code>doFinal</code> call (the missing call is commented out).</p>
+<pre tabindex=0><code>Cipher cipher = Cipher.getInstance(&quot;AES/ECB/PKCS5Padding&quot;);
+//cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
+cipher.doFinal(plainText);
+</code></pre><h3 id=the-ensures-and-the-requires-section>The ENSURES and the REQUIRES section</h3>
+<p>Cryptographic tasks are more complex and involve interaction of multiple object instances at runtime. For example for an encryption task with a <code>Cipher</code> instance, the <code>Cipher</code> object must be initialized with a securely generated key. The API of the <code>Cipher</code> object has a method <code>init(encmode,key)</code> where the second parameter is the respective key and is of type <code>SecretKeySpec</code>. For a correct use of the <code>Cipher</code> object, the key must be used correctly as well.</p>
+<p>To cope with these object interactions, <em>CrySL</em> allows the specification of what we call <em>predicates</em> that establish a rely-guarantee mechanism. Predicates are listed in the blocks <code>REQUIRES</code> and <code>ENSURES</code>. An object that is used in coherence with the rule receives the predicate listed in the <code>ENSURES</code> block. In turn, the block <code>REQUIRES</code> allows rules to force other objects to hold certain predicates.</p>
+<p>The specification of the <code>Cipher</code> rule lists a predicate <code>generatedKey[key,...]</code> within its <code>REQUIRES</code> block. The variable name <code>key</code> refers to the same object that is used within the event <code>Init: init(encmode, key);</code> of the <code>EVENTS</code> block. Hence, the key object must receive this predicate which is listed in the rule for <code>javax.crypto.SecretKeySpec</code>.</p>
+<pre tabindex=0><code>SPEC javax.crypto.spec.SecretKeySpec
+OBJECTS
+	java.lang.String alg;
+	byte[] keyMaterial;
+		
+EVENTS
+	c1: SecretKeySpec(keyMaterial, alg);
+...
+REQUIRES
+	randomized[keyMaterial]; 
+ENSURES
+	generatedKey[this, alg];
+</code></pre><p>Above is an excerpt of the rule for <code>SecretKeySpec</code>. The predicate <code>generatedKey</code> is listed within the <code>ENSURES</code> block of this rule. The static analysis labels any object of type <code>SecretKeySpec</code> by <code>generatedKey</code> when the analysis finds the object to be used correctly (with respect to its <em>CrySL</em> rule).</p>
+<h2 id=on-the-fly-addition-or-modification-of-crysl-rules>On-the-fly Addition or Modification of CrySL Rules</h2>
+<p>All <em>CrySL</em> rules currently used by CogniCrypt are present in the repository named <a href=https://github.com/CROSSINGTUD/Crypto-API-Rules>Crypto-API-Rules</a>. As of April 2020, it contains rules for the four APIs mentioned above. You need to clone the corresponding project and import it as a Maven project into Eclipse where you have already installed CogniCrypt and the <em>CrySL</em> plugins. These plugins let you update the <em>CrySL</em> rules on the fly. You can edit them or even add new rules. CogniCrypt automatically parses these rules and may take them into account in any future analyses and code generations. You need to enable this feature in the CogniCrypt preferences first, though.</p>
+<p>The below tutorial describes how to modify <em>CrySL</em> rules on the fly. The first screenshot shows an example code which uses <code>KeyGenerator</code> that is created with correct algorithm, namely &ldquo;AES&rdquo;, and later initialized with a proper keySize i.e. 128. Hence, the plugin doesn&rsquo;t show any error markers.</p>
+<p>Now let us change the <code>keySize</code> to a incorrect value (Eg. 200) as shown in second screenshot. The plugin displays a error marker upon saving the changes.</p>
+<p>The below screenshot shows the value of error marker displayed by the plugin.</p>
+<p>The following screenshot shows the original <em>CrySL</em> rule for <code>KeyGenerator</code> class.</p>
+<p>Now let us modify the <em>CrySL</em> rule of <code>KeyGenerator</code> class so that the <code>init</code> method also takes 200 as its <code>keySize</code> and later save the corresponding changes.</p>
+<p>Upon saving the new <em>CrySL</em> rule, the plugin would re-run the analysis based your new rules. Consequently, no error markers would be displayed as shown below.</p>
+<h2 id=crysl-rules-for-the-jca>CrySL Rules for the JCA</h2>
+<p>CogniCrypt ships with a pre-defined set of <em>CrySL</em> rules. The standard rule set covers the correct specification of most classes of the <a href=https://docs.oracle.com/javase/8/docs/technotes/guides/security/crypto/CryptoSpec.html>Java Cryptographic Architecture (JCA)</a>. The JCA offers various cryptographic services. In the following, we describe these services with their respective classes and briefly summarize important usage constraints. All mentioned classes are defined in the packages <code>javax.crypto</code> and <code>java.security</code> of the JCA.</p>
+<p>The rule set is also <a href=https://github.com/CROSSINGTUD/Crypto-API-Rules/tree/master/JavaCryptographicArchitecture>publicly available</a> .The definition of the <em>CrySL</em> rules are found in the files ending in <code>.cryptsl</code> named with the respective class name.</p>
+<ul>
+<li><strong>Asymmetric Key Generation</strong>:
+Asymmetric and symmetric cryptography requires different key formats. Asymmetric cryptography uses pairs of public and private keys. While one of the keys encrypts plaintexts to ciphertexts, the second key decrypts the ciphertext. The JCA models a key pair as class <code>KeyPair</code> and are generated by <code>KeyPairGenerator</code>.</li>
+<li><strong>Symmetric Key Generation</strong>:
+Symmetric cryptography uses the same key for encryption and decryption. The JCA models symmetric keys as type <code>SecretKey</code>, generated by a <code>SecretKeyFactory</code> or <code>KeyGenerator</code>. The <code>SecretKeyFactory</code> also enables password-based cryptography using <code>PBEParameterSpec</code> or <code>PBEKeySpec</code>.</li>
+<li><strong>Signing and Verification of Data</strong>:
+The class <code>Signature</code> of the JCA allows one to digitally sign data and verify a signature based on a private/public key pair. A <code>Signature</code> requires the key pair to be correctly generated, hence the rule for <code>Signature</code> requires a predicate from the asymmetric-key generation task.</li>
+<li><strong>Generation of Initialization Vectors</strong>:
+Initialization vectors (IVs) are used to add entropy to ciphertexts of encryptions. An IV must have enough randomness and must be properly generated. The JCA class <code>IvParameterSpec</code> wraps a byte array as an IV and it is required for the array to be randomized by <code>SecureRandom</code>. The <em>CrySL</em> rule for <code>IvParameterSpec</code> requires a predicate <code>randomized</code>.</li>
+<li><strong>Encryption and Decryption</strong>
+The key component of the JCA is represented by the class <code>Cipher</code>, which implements functionality to encrypt or decrypt data. Depending on the used algorithms, modes and paddings must be selected and keys and initialization vectors must be properly generated. Hence, the complete <em>CrySL</em> rule for <code>Cipher</code> requires many other cryptographic services to be executed securely earlier and list them in its respective <code>REQUIRES</code> clause.</li>
+<li><strong>Hashing & MACs</strong>´:
+There are two forms of cryptographic hash functions. A MAC is an authenticated hash that requires a symmetric keys, but there are also keyless hash functions such as MD5 or SHA-256. The JCA&rsquo;s class <code>Mac</code> implements functionality for mac-ing, while keyless hashes are computed by <code>MessageDigest</code>.</li>
+<li><strong>Persisting Keys</strong>:
+Securely storing key material is an important cryptographic task for confidentiality and integrity of the encrypted data. The JCA class <code>KeyStore</code> supports developers in this task and stores the key material.</li>
+<li><strong>Cryptographically Secure Random-Number Generation</strong>:
+Randomness is vital in all aspects of cryptography. Java offers cryptographically secure pseudo-random number generators through <code>SecureRandom</code>. As discussed for <code>PBEKeySpec</code>, <code>SecureRandom</code> often acts as a helper and therefore many rules list the <code>randomized</code> predicate in their own <code>REQUIRES</code> section.</li>
+</ul>
+<h2 id=crysl-rules-for-the-bouncy-castle>CrySL Rules for the Bouncy Castle</h2>
+<p>The below rule set covers the specifications of most classes in the <a href=https://github.com/bcgit/bc-java/tree/master/core/src/main/java/org/bouncycastle/crypto>Bouncy Castle (BC)</a>. In the following, we describe all the services with their respective classes and briefly summarize important usage constraints. All mentioned classes are defined in the lightweight crypto packages <code>org.bouncycastle.crypto.*</code> of the BC.</p>
+<p>The rule set is also <a href=https://github.com/CROSSINGTUD/Crypto-API-Rules/tree/master/BouncyCastle>publicly available</a></p>
+<ul>
+<li><strong>Asymmetric Key Generation</strong>:
+In BC every asymmetric cryptography has a separate key pair generator. For example RSA has <code>RSAKeyPairGenerator</code>, DSA has <code>DSAKeyPairGenerator</code> and so on. These asymmetric or public/private, cipher key pair generators should conform to an interface <code>AsymmetricCipherKeyPairGenerator</code>. Every key pair generator has its corresponding key generation parameters which specify the keys being generated. For example, RSA has <code>RSAKeyGenerationParameters</code> and DSA has <code>DSAKeyGenerationParameters</code> both of which conforms to its base class <code>KeyGenerationParameters</code>.</li>
+<li><strong>Symmetric Key Generation</strong>:
+The BC has a base class named <code>CipherKeyGenerator</code> for symmetric or secret, cipher key generators. Every symmetric algorithm has specific key generator class which extends this base class. For example DES has <code>DESKeyGenerator</code> which extends the base class to specify the parameters.</li>
+<li><strong>Encryption and Decryption</strong>:
+There are two variants of <code>Cipher</code> equivalent in Bouncy Castle. One is <code>BlockCipher</code> and the other one is <code>AsymmetricBlockCipher</code> both of which are interfaces. All the symmetric engines & modes should conform to the former interface and all the asymmetric counterparts should adhere to the latter. BC also provides classes named <code>BufferedBlockCipher</code> and <code>BufferedAsymmetricBlockCipher</code> which are buffer wrappers for block cipher and asymmetric block cipher respectively, allowing the input to be accumulated in a piecemeal fashion until final processing.</li>
+<li><strong>Hashing & MACs</strong>´:
+The BC has a base interface named <code>Mac</code> for implementations of message authentication codes (MACs) and <code>Digest</code> for implementations of hashing.</li>
+<li><strong>Cryptographically Secure Random-Number Generation</strong>:
+The BC uses Java offered cryptographically secure pseudo-random number generator <code>SecureRandom</code> for randomness.</li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<footer id=solstice-footer>
+<div class=container>
+<div class=row>
+<section class="col-sm-3 hidden-print" id=footer-eclipse-foundation>
+<h2 class=section-title style=color:#fff>Eclipse Foundation</h2>
+<ul class=nav>
+<li><a href=https://www.eclipse.org/org/>About Us</a></li>
+<li><a href=https://www.eclipse.org/org/foundation/contact.php>Contact
+Us</a></li>
+<li><a href=https://www.eclipse.org/donate>Donate</a></li>
+<li><a href=https://www.eclipse.org/org/documents/>Governance</a></li>
+<li><a href=https://www.eclipse.org/artwork/>Logo and
+Artwork</a></li>
+<li><a href=https://www.eclipse.org/org/foundation/directors.php>Board of Directors</a></li>
+</ul>
+</section>
+<section class="col-sm-3 hidden-print" id=footer-legal>
+<h2 class=section-title style=color:#fff>Legal</h2>
+<ul class=nav>
+<li><a href=https://www.eclipse.org/legal/privacy.php>Privacy
+Policy</a></li>
+<li><a href=https://www.eclipse.org/legal/termsofuse.php>Terms
+of Use</a></li>
+<li><a href=https://www.eclipse.org/legal/copyright.php>Copyright
+Agent</a></li>
+<li><a href=https://www.eclipse.org/legal/epl-2.0/>Eclipse
+Public License</a></li>
+<li><a href=https://www.eclipse.org/legal/>Legal Resources
+</a></li>
+</ul>
+</section>
+<section class="col-sm-3 hidden-print" id=footer-useful-links>
+<h2 class=section-title style=color:#fff>Useful Links</h2>
+<ul class=nav>
+<li><a href=https://bugs.eclipse.org/bugs/>Report a Bug</a></li>
+<li><a href=//help.eclipse.org/>Documentation</a></li>
+<li><a href=https://www.eclipse.org/contribute/>How to
+Contribute</a></li>
+<li><a href=https://www.eclipse.org/mail/>Mailing Lists</a></li>
+<li><a href=https://www.eclipse.org/forums/>Forums</a></li>
+<li><a href=//marketplace.eclipse.org>Marketplace</a></li>
+</ul>
+</section>
+<section class="col-sm-3 hidden-print" id=footer-other>
+<h2 class=section-title style=color:#fff>Other</h2>
+<ul class=nav>
+<li><a href=https://www.eclipse.org/ide/>IDE and Tools</a></li>
+<li><a href=https://www.eclipse.org/projects>Community of
+Projects</a></li>
+<li><a href=https://www.eclipse.org/org/workinggroups/>Working
+Groups</a></li>
+<li><a href=https://www.eclipse.org/org/research/>Research@Eclipse</a></li>
+<li><a href=https://status.eclipse.org>Service Status</a></li>
+</ul>
+</section>
+<div class="col-sm-12 margin-top-20">
+<div class=row>
+<div id=copyright class=col-md-8>
+<p id=copyright-text style=color:#fff>Copyright © Eclipse Foundation, Inc. All
+Rights Reserved.</p>
+</div>
+<div class="col-md-4 social-media">
+<ul class="list-inline text-right">
+<li><a class="social-media-link fa-stack fa-lg" href=https://twitter.com/cognicrypt> <i class="fa fa-circle-thin fa-stack-2x"></i> <i class="fa fa-twitter fa-stack-1x"></i>
+</a></li>
+<li><a class="social-media-link fa-stack fa-lg" href=https://www.youtube.com/channel/UCNKzeZzhIMOhWm9eqlP15kw> <i class="fa fa-circle-thin fa-stack-2x"></i> <i class="fa fa-youtube fa-stack-1x"></i>
+</a></li>
+<li><a class="social-media-link fa-stack fa-lg" href=https://www.linkedin.com/company/eclipse-foundation> <i class="fa fa-circle-thin fa-stack-2x"></i> <i class="fa fa-linkedin fa-stack-1x"></i>
+</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=https://www.eclipse.org/cognicrypt/assets/js/main.js></script>
+<script src=js/shuffle.js></script>
+<script src=js/index.js></script>
+</body>
+</html>

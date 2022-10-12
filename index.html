@@ -1,0 +1,372 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>CogniCrypt - Secure Integration of Cryptographic Software | CogniCrypt</title>
+<meta property="og:title" content="CogniCrypt - Secure Integration of Cryptographic Software | CogniCrypt">
+<meta name=twitter:title content="CogniCrypt - Secure Integration of Cryptographic Software | CogniCrypt">
+<meta name=description content="A large number of recent studies have shown that most software applications that use cryptographic procedures misuse them. The VeraCode Report State of the Software Security v11 (2020)lists the insecure use of cryptography as the third most common cause of software vulnerabilities, right after information leakage and CRLF injection.
+Eclipse CogniCrypt was developed within the collaborative research center CROSSING of Technische Universität Darmstadt. It allows developers to quickly identify and fix security-critical misuses of cryptographic libraries.">
+<meta property="og:description" content="A large number of recent studies have shown that most software applications that use cryptographic procedures misuse them. The VeraCode Report State of the Software Security v11 (2020)lists the insecure use of cryptography as the third most common cause of software vulnerabilities, right after information leakage and CRLF injection.
+Eclipse CogniCrypt was developed within the collaborative research center CROSSING of Technische Universität Darmstadt. It allows developers to quickly identify and fix security-critical misuses of cryptographic libraries.">
+<meta name=twitter:description content="A large number of recent studies have shown that most software applications that use cryptographic procedures misuse them. The VeraCode Report State of the Software Security v11 (2020)lists the …">
+<meta name=author content="Eclipse Foundation">
+<link href=https://www.eclipse.org/cognicrypt/favicon.ico rel=icon type=image/x-icon>
+<meta name=twitter:card content="summary">
+<meta property="og:url" content="https://www.eclipse.org/cognicrypt/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Securely using Cryptography with CogniCrypt">
+<meta name=keywords content>
+<meta name=generator content="Hugo 0.91.2">
+<link rel=canonical href=https://www.eclipse.org/cognicrypt/>
+<link rel=alternate href=https://www.eclipse.org/cognicrypt/index.xml type=application/rss+xml title="Securely using Cryptography with CogniCrypt">
+<link rel=stylesheet href=https://www.eclipse.org/cognicrypt/assets/css/bootstrap.css>
+<link rel=apple-touch-icon sizes=57x57 href=/apple-icon-57x57.png>
+<link rel=apple-touch-icon sizes=60x60 href=/apple-icon-60x60.png>
+<link rel=apple-touch-icon sizes=72x72 href=/apple-icon-72x72.png>
+<link rel=apple-touch-icon sizes=76x76 href=/apple-icon-76x76.png>
+<link rel=apple-touch-icon sizes=114x114 href=/apple-icon-114x114.png>
+<link rel=apple-touch-icon sizes=120x120 href=/apple-icon-120x120.png>
+<link rel=apple-touch-icon sizes=144x144 href=/apple-icon-144x144.png>
+<link rel=apple-touch-icon sizes=152x152 href=/apple-icon-152x152.png>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-icon-180x180.png>
+<link rel=icon type=image/png sizes=192x192 href=/android-icon-192x192.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=96x96 href=/favicon-96x96.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=manifest href=/manifest.json>
+<meta name=msapplication-TileColor content="#ffffff">
+<meta name=msapplication-TileImage content="/ms-icon-144x144.png">
+<meta name=theme-color content="#ffffff">
+<link href="//fonts.googleapis.com/css?family=Libre+Franklin:400,700,300,600,100" rel=stylesheet type=text/css>
+</head>
+<body>
+<header class=homepage>
+<nav class="navbar navbar-default">
+<div class=container>
+<div class=navbar-header>
+<button type=button class="navbar-toggle collapsed" data-toggle=collapse data-target=#bs-example-navbar-collapse-1>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+</button>
+<a class=navbar-brand href=https://www.eclipse.org/cognicrypt>
+<img alt="Eclipse CogniCrypt" src=https://www.eclipse.org/cognicrypt/assets/images/cognicrypt-logo.png>
+</a>
+</div>
+<div class="collapse navbar-collapse" id=bs-example-navbar-collapse-1>
+<ul class="nav navbar-nav navbar-right">
+<li>
+<a href=/cognicrypt/publications/>
+Publications
+</a>
+</li>
+<li>
+<a href=/cognicrypt/downloads/>
+Downloads
+</a>
+</li>
+<li class=dropdown>
+<a href=# data-toggle=dropdown class=dropdown-toggle>
+<span>Documentation</span>
+<b class=caret></b>
+</a>
+<ul class=dropdown-menu>
+<li><a href=/cognicrypt/documentation/>Introduction & Configuration</a> </li>
+<li><a href=/cognicrypt/documentation/crysl/>CrySL Language</a> </li>
+<li><a href=/cognicrypt/documentation/codegen/>Code Generation</a> </li>
+<li><a href=/cognicrypt/documentation/codeanalysis/>Code Analysis</a> </li>
+</ul>
+</li>
+<li class=dropdown>
+<a href=# data-toggle=dropdown class=dropdown-toggle>
+<span>Contributing</span>
+<b class=caret></b>
+</a>
+<ul class=dropdown-menu>
+<li><a href=/cognicrypt/contributing#bugs>Bugs and Feature Requests</a> </li>
+<li><a href=/cognicrypt/contributing#code>Code Contributions</a> </li>
+<li><a href=/cognicrypt/contributing#prim>Cryptographic Primitives</a> </li>
+<li><a href=/cognicrypt/contributing#tasks>Cryptographic Tasks</a> </li>
+</ul>
+</li>
+<li>
+<a href=/cognicrypt/news/>
+News
+</a>
+</li>
+<li class="dropdown eclipse-more hidden-xs">
+<a data-toggle=dropdown class=dropdown-toggle role=button>More<b class=caret></b></a>
+<ul class=dropdown-menu>
+<li>
+<div class=yamm-content>
+<div class=row>
+<ul class="col-sm-8 list-unstyled">
+<li>
+<p><strong>Community</strong></p>
+</li>
+<li><a href=http://marketplace.eclipse.org>Marketplace</a></li>
+<li><a href=http://events.eclipse.org>Events</a></li>
+<li><a href=http://www.planeteclipse.org/>Planet Eclipse</a></li>
+<li><a href=https://www.eclipse.org/community/eclipse_newsletter/>Newsletter</a></li>
+<li><a href=https://www.youtube.com/user/EclipseFdn>Videos</a></li>
+<li><a href=https://blogs.eclipse.org>Blogs</a></li>
+</ul>
+<ul class="col-sm-8 list-unstyled">
+<li>
+<p><strong>Participate</strong></p>
+</li>
+<li><a href=https://bugs.eclipse.org/bugs/>Report a Bug</a></li>
+<li><a href=https://www.eclipse.org/forums/>Forums</a></li>
+<li><a href=https://www.eclipse.org/mail/>Mailing Lists</a></li>
+<li><a href=https://wiki.eclipse.org/>Wiki</a></li>
+<li><a href=https://wiki.eclipse.org/IRC>IRC</a></li>
+</ul>
+<ul class="col-sm-8 list-unstyled">
+<li>
+<p><strong>Eclipse IDE</strong></p>
+</li>
+<li><a href=https://www.eclipse.org/downloads>Download</a></li>
+<li><a href=https://help.eclipse.org>Documentation</a></li>
+<li><a href=https://www.eclipse.org/getting_started>Getting Started / Support</a></li>
+<li><a href=https://www.eclipse.org/contribute/>How to Contribute</a></li>
+<li><a href=https://www.eclipse.org/ide/>IDE and Tools</a></li>
+<li><a href=https://www.eclipse.org/forums/index.php/f/89/>Newcomer Forum</a></li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li style=min-width:100px;padding-top:12px;padding-left:50px;margin-left:-35px>
+<a href="https://twitter.com/cognicrypt?ref_src=twsrc%5Etfw" class=twitter-follow-button data-show-count=false data-show-screen-name=false></a><script async src=https://platform.twitter.com/widgets.js></script>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class=container>
+<div class=row>
+<div class="col-md-8 col-sm-12">
+<h1><span class=green>Eclipse</span> <span class=green>CogniCrypt</span></h1>
+<p>Eclipse CogniCrypt is an intelligent open-source platform ensuring the secure usage of crypto components.</p>
+</div>
+</div>
+</section>
+</header>
+<main class=main>
+<section class=first>
+<div class=container>
+<div class=row>
+<div class=col-md-10>
+<h3><span class=green>CogniCrypt - Secure Integration of Cryptographic Software</span></h3>
+</div>
+</div>
+</div>
+</section>
+<section class=second>
+<div class=container>
+<div class=col-md-10>
+<p>A large number of recent studies have shown that most software applications that use cryptographic procedures misuse them. The VeraCode Report State of the Software Security v11 (2020) lists the insecure use of cryptography as the third most common cause of software vulnerabilities, right after information leakage and CRLF injection.</p>
+<p>Eclipse CogniCrypt was developed within the collaborative research center CROSSING of Technische Universität Darmstadt. It allows developers to quickly identify and fix security-critical misuses of cryptographic libraries.</p>
+<p>The plugin Eclipse CogniCrypt ships in two main components: A wizard for <strong>code generation</strong> that supports a developer in generating secure code for common cryptographic tasks and a <strong>static code analysis</strong> that continuously checks the (generated and non-generated) code of the developer directly within Eclipse.</p>
+<p><img src=images/home_codegen_codeanalysis.png alt="Overview over CogniCrypt"></p>
+<h1 id=jobs>Jobs</h1>
+<p>We currently have several openings for full-time research staff and software developers who will help us bring CogniCrypt to the next level. The openings are located both at Paderborn and Darmstadt. Please contact Eric Bodden for further information.</p>
+<h1 id=code-generation>Code Generation</h1>
+<p>The code-generation feature CogniCryptGEN is designed as a wizard that guides developers to select the correct cryptographic algorithms for their cryptographic use case at hand. The wizard asks high-level questions related the use case in order to tailor the solution to the user&rsquo;s needs. The <a href=./documentation/codegen>user documentation</a> discusses the wizard in more detail.</p>
+<h1 id=static-code-analysis>Static Code Analysis</h1>
+<p>The static code analysis CogniCryptSAST continuously checks the developer&rsquo;s code for correct implementations. Upon saving the code in the editor, a static analysis is triggered in the background and reports warning when a cryptographic API is used incorrectly.</p>
+<p>The video below shows a minimal example demonstrating the static code analysis within Eclipse.</p>
+</div>
+</div>
+</section>
+<section class=third>
+<div class=container>
+<div class=row>
+<div class="col-md-8 logos">
+<div class=row style=margin-top:-37px>
+<div class="col-md-4 col-xs-6 sc-member" style="padding:20px 60px;display:none">
+<div style=height:120px;line-height:120px>
+<a href=https://www.crossing.tu-darmstadt.de/crc_1119/index.en.jsp target=_blank>
+<img src=assets/images/members/logo-crossing.png class=img-responsive alt="logo-0- CROSSING" style=max-height:110px;display:inline-block;vertical-align:middle>
+</a>
+</div>
+</div>
+<div class="col-md-4 col-xs-6 sc-member" style="padding:20px 60px;display:none">
+<div style=height:120px;line-height:120px>
+<a href=https://www.cysec.tu-darmstadt.de/cysec/index.en.jsp target=_blank>
+<img src=assets/images/members/logo-tud.png class=img-responsive alt="logo-1- Technische Universität Darmstadt" style=max-height:110px;display:inline-block;vertical-align:middle>
+</a>
+</div>
+</div>
+<div class="col-md-4 col-xs-6 sc-member" style="padding:20px 60px;display:none">
+<div style=height:120px;line-height:120px>
+<a href=https://www.hni.uni-paderborn.de/en/ target=_blank>
+<img src=assets/images/members/logo-hni.png class=img-responsive alt="logo-2- Heinz Nixdorf Institute at Paderborn University" style=max-height:110px;display:inline-block;vertical-align:middle>
+</a>
+</div>
+</div>
+<div class="col-md-4 col-xs-6 sc-member" style="padding:20px 60px;display:none">
+<div style=height:120px;line-height:120px>
+<a href=https://www.iem.fraunhofer.de/en.html target=_blank>
+<img src=assets/images/members/logo-iem.png class=img-responsive alt="logo-3- Fraunhofer Institute for Mechatronic Systems Design (IEM)" style=max-height:110px;display:inline-block;vertical-align:middle>
+</a>
+</div>
+</div>
+<div class="col-md-4 col-xs-6 sc-member" style="padding:20px 60px;display:none">
+<div style=height:120px;line-height:120px>
+<a href=https://www.ualberta.ca/ target=_blank>
+<img src=assets/images/members/logo-alberta.png class=img-responsive alt="logo-5- University of Alberta" style=max-height:110px;display:inline-block;vertical-align:middle>
+</a>
+</div>
+</div>
+<div class="col-md-4 col-xs-6 sc-member" style="padding:20px 60px;display:none">
+<div style=height:120px;line-height:120px>
+<a href=http://www.unb.br/en/ target=_blank>
+<img src=assets/images/members/logo-unb.png class=img-responsive alt="logo-6- University of Brasília" style=max-height:110px;display:inline-block;vertical-align:middle>
+</a>
+</div>
+</div>
+<div class="col-md-4 col-xs-6" style="padding:20px 60px">
+<a id=link-link-more-members href=/working-group#members>
+<div id=link-more-members style=font-size:1.5em;height:120px;line-height:1.2em;margin-top:30px>
+</div>
+</a>
+</div>
+</div>
+</div>
+<section class="working-group col-md-4 line-divider-left">
+<h1 class=green>Main Contributors</h1>
+<p>CogniCrypt originated in TU Darmstadt's <a href=https://www.crossing.tu-darmstadt.de/crc_1119/index.en.jsp target=_blank>Collaborative Research Center CROSSING</a> but by now its development is managed in an international collaboration between several research institutes. <a href=/contributing><strong>Join Us</strong></a>!
+</p>
+<p><a href=https://www.eclipse.org/cognicrypt/contributing/ class="btn btn-primary">Ecosystem</a>
+</p>
+</section>
+<div class="col-md-8 logos">
+<h4>Generous financial support is provided by:</h4>
+<div class=row style=margin-top:-37px>
+<div class="col-md-4 col-xs-6 sc-member" style="padding:20px 60px;display:none">
+<div style=height:120px;line-height:120px>
+<a href=https://www.dfg.de/en/ target=_blank>
+<img src=assets/images/supporters/logo-dfg.png class=img-responsive alt="logo-1- German Research Foundation (DFG)" style=max-height:110px;display:inline-block;vertical-align:middle>
+</a>
+</div>
+</div>
+<div class="col-md-4 col-xs-6 sc-member" style="padding:20px 60px;display:none">
+<div style=height:120px;line-height:120px>
+<a href="https://labs.oracle.com/pls/apex/f?p=labs:50:0" target=_blank>
+<img src=assets/images/supporters/logo-oracle.png class=img-responsive alt="logo-2- Oracle" style=max-height:110px;display:inline-block;vertical-align:middle>
+</a>
+</div>
+</div>
+<div class="col-md-4 col-xs-6 sc-member" style="padding:20px 60px;display:none">
+<div style=height:120px;line-height:120px>
+<a href=https://www.connext.de/ target=_blank>
+<img src=assets/images/supporters/logo-connext.png class=img-responsive alt="logo-3- Connext Vivendi" style=max-height:110px;display:inline-block;vertical-align:middle>
+</a>
+</div>
+</div>
+<div class="col-md-4 col-xs-6 sc-member" style="padding:20px 60px;display:none">
+<div style=height:120px;line-height:120px>
+<a href=https://aws.amazon.com/ target=_blank>
+<img src=assets/images/supporters/logo-aws.png class=img-responsive alt="logo-5 - AWS" style=max-height:110px;display:inline-block;vertical-align:middle>
+</a>
+</div>
+</div>
+<div class="col-md-4 col-xs-6 sc-member" style="padding:20px 60px;display:none">
+<div style=height:120px;line-height:120px>
+<a href=https://www.achelos.de/ target=_blank>
+<img src=assets/images/supporters/logo-achelos.png class=img-responsive alt=logo-Achelos style=max-height:110px;display:inline-block;vertical-align:middle>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer id=solstice-footer>
+<div class=container>
+<div class=row>
+<section class="col-sm-3 hidden-print" id=footer-eclipse-foundation>
+<h2 class=section-title style=color:#fff>Eclipse Foundation</h2>
+<ul class=nav>
+<li><a href=https://www.eclipse.org/org/>About Us</a></li>
+<li><a href=https://www.eclipse.org/org/foundation/contact.php>Contact
+Us</a></li>
+<li><a href=https://www.eclipse.org/donate>Donate</a></li>
+<li><a href=https://www.eclipse.org/org/documents/>Governance</a></li>
+<li><a href=https://www.eclipse.org/artwork/>Logo and
+Artwork</a></li>
+<li><a href=https://www.eclipse.org/org/foundation/directors.php>Board of Directors</a></li>
+</ul>
+</section>
+<section class="col-sm-3 hidden-print" id=footer-legal>
+<h2 class=section-title style=color:#fff>Legal</h2>
+<ul class=nav>
+<li><a href=https://www.eclipse.org/legal/privacy.php>Privacy
+Policy</a></li>
+<li><a href=https://www.eclipse.org/legal/termsofuse.php>Terms
+of Use</a></li>
+<li><a href=https://www.eclipse.org/legal/copyright.php>Copyright
+Agent</a></li>
+<li><a href=https://www.eclipse.org/legal/epl-2.0/>Eclipse
+Public License</a></li>
+<li><a href=https://www.eclipse.org/legal/>Legal Resources
+</a></li>
+</ul>
+</section>
+<section class="col-sm-3 hidden-print" id=footer-useful-links>
+<h2 class=section-title style=color:#fff>Useful Links</h2>
+<ul class=nav>
+<li><a href=https://bugs.eclipse.org/bugs/>Report a Bug</a></li>
+<li><a href=//help.eclipse.org/>Documentation</a></li>
+<li><a href=https://www.eclipse.org/contribute/>How to
+Contribute</a></li>
+<li><a href=https://www.eclipse.org/mail/>Mailing Lists</a></li>
+<li><a href=https://www.eclipse.org/forums/>Forums</a></li>
+<li><a href=//marketplace.eclipse.org>Marketplace</a></li>
+</ul>
+</section>
+<section class="col-sm-3 hidden-print" id=footer-other>
+<h2 class=section-title style=color:#fff>Other</h2>
+<ul class=nav>
+<li><a href=https://www.eclipse.org/ide/>IDE and Tools</a></li>
+<li><a href=https://www.eclipse.org/projects>Community of
+Projects</a></li>
+<li><a href=https://www.eclipse.org/org/workinggroups/>Working
+Groups</a></li>
+<li><a href=https://www.eclipse.org/org/research/>Research@Eclipse</a></li>
+<li><a href=https://status.eclipse.org>Service Status</a></li>
+</ul>
+</section>
+<div class="col-sm-12 margin-top-20">
+<div class=row>
+<div id=copyright class=col-md-8>
+<p id=copyright-text style=color:#fff>Copyright © Eclipse Foundation, Inc. All
+Rights Reserved.</p>
+</div>
+<div class="col-md-4 social-media">
+<ul class="list-inline text-right">
+<li><a class="social-media-link fa-stack fa-lg" href=https://twitter.com/cognicrypt> <i class="fa fa-circle-thin fa-stack-2x"></i> <i class="fa fa-twitter fa-stack-1x"></i>
+</a></li>
+<li><a class="social-media-link fa-stack fa-lg" href=https://www.youtube.com/channel/UCNKzeZzhIMOhWm9eqlP15kw> <i class="fa fa-circle-thin fa-stack-2x"></i> <i class="fa fa-youtube fa-stack-1x"></i>
+</a></li>
+<li><a class="social-media-link fa-stack fa-lg" href=https://www.linkedin.com/company/eclipse-foundation> <i class="fa fa-circle-thin fa-stack-2x"></i> <i class="fa fa-linkedin fa-stack-1x"></i>
+</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=https://www.eclipse.org/cognicrypt/assets/js/main.js></script>
+<script src=js/shuffle.js></script>
+<script src=js/index.js></script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!doctype html><html lang=en>
+<head>
+<meta charset=utf-8>
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Contributors Guide | CogniCrypt</title>
+<meta property="og:title" content="Contributors Guide | CogniCrypt">
+<meta name=twitter:title content="Contributors Guide | CogniCrypt">
+<meta name=description content="There are several opportunities for non-project-members to contribute to CogniCrypt:
+ CogniCrypt users may contribute Bug Reports and Feature Requests, Regular developers who take interest in CogniCrypt may provide bug fixes and other kind of code contributions, Lastly, cryptography experts may share their own cryptographic components so that they can be used by CogniCrypt users.  Bug Reports and Feature Requests  In case you find a bug or have an idea for a feature, please check out CogniCrypt&rsquo;s issue tracker.">
+<meta property="og:description" content="There are several opportunities for non-project-members to contribute to CogniCrypt:
+ CogniCrypt users may contribute Bug Reports and Feature Requests, Regular developers who take interest in CogniCrypt may provide bug fixes and other kind of code contributions, Lastly, cryptography experts may share their own cryptographic components so that they can be used by CogniCrypt users.  Bug Reports and Feature Requests  In case you find a bug or have an idea for a feature, please check out CogniCrypt&rsquo;s issue tracker.">
+<meta name=twitter:description content="There are several opportunities for non-project-members to contribute to CogniCrypt:
+ CogniCrypt users may contribute Bug Reports and Feature Requests, Regular developers who take interest in …">
+<meta name=author content="Eclipse Foundation">
+<link href=https://www.eclipse.org/cognicrypt/favicon.ico rel=icon type=image/x-icon>
+<meta name=twitter:card content="summary">
+<meta property="og:url" content="https://www.eclipse.org/cognicrypt/contributing/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Securely using Cryptography with CogniCrypt">
+<meta name=keywords content>
+<meta name=generator content="Hugo 0.91.2">
+<link rel=canonical href=https://www.eclipse.org/cognicrypt/contributing/>
+<link rel=alternate href=https://www.eclipse.org/cognicrypt/contributing/index.xml type=application/rss+xml title="Securely using Cryptography with CogniCrypt">
+<link rel=stylesheet href=https://www.eclipse.org/cognicrypt/assets/css/bootstrap.css>
+<link rel=apple-touch-icon sizes=57x57 href=/apple-icon-57x57.png>
+<link rel=apple-touch-icon sizes=60x60 href=/apple-icon-60x60.png>
+<link rel=apple-touch-icon sizes=72x72 href=/apple-icon-72x72.png>
+<link rel=apple-touch-icon sizes=76x76 href=/apple-icon-76x76.png>
+<link rel=apple-touch-icon sizes=114x114 href=/apple-icon-114x114.png>
+<link rel=apple-touch-icon sizes=120x120 href=/apple-icon-120x120.png>
+<link rel=apple-touch-icon sizes=144x144 href=/apple-icon-144x144.png>
+<link rel=apple-touch-icon sizes=152x152 href=/apple-icon-152x152.png>
+<link rel=apple-touch-icon sizes=180x180 href=/apple-icon-180x180.png>
+<link rel=icon type=image/png sizes=192x192 href=/android-icon-192x192.png>
+<link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png>
+<link rel=icon type=image/png sizes=96x96 href=/favicon-96x96.png>
+<link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png>
+<link rel=manifest href=/manifest.json>
+<meta name=msapplication-TileColor content="#ffffff">
+<meta name=msapplication-TileImage content="/ms-icon-144x144.png">
+<meta name=theme-color content="#ffffff">
+<link href="//fonts.googleapis.com/css?family=Libre+Franklin:400,700,300,600,100" rel=stylesheet type=text/css>
+</head>
+<body>
+<header class=homepage>
+<nav class="navbar navbar-default">
+<div class=container>
+<div class=navbar-header>
+<button type=button class="navbar-toggle collapsed" data-toggle=collapse data-target=#bs-example-navbar-collapse-1>
+<span class=sr-only>Toggle navigation</span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+<span class=icon-bar></span>
+</button>
+<a class=navbar-brand href=https://www.eclipse.org/cognicrypt>
+<img alt="Eclipse CogniCrypt" src=https://www.eclipse.org/cognicrypt/assets/images/cognicrypt-logo.png>
+</a>
+</div>
+<div class="collapse navbar-collapse" id=bs-example-navbar-collapse-1>
+<ul class="nav navbar-nav navbar-right">
+<li>
+<a href=/cognicrypt/publications/>
+Publications
+</a>
+</li>
+<li>
+<a href=/cognicrypt/downloads/>
+Downloads
+</a>
+</li>
+<li class=dropdown>
+<a href=# data-toggle=dropdown class=dropdown-toggle>
+<span>Documentation</span>
+<b class=caret></b>
+</a>
+<ul class=dropdown-menu>
+<li><a href=/cognicrypt/documentation/>Introduction & Configuration</a> </li>
+<li><a href=/cognicrypt/documentation/crysl/>CrySL Language</a> </li>
+<li><a href=/cognicrypt/documentation/codegen/>Code Generation</a> </li>
+<li><a href=/cognicrypt/documentation/codeanalysis/>Code Analysis</a> </li>
+</ul>
+</li>
+<li class=dropdown>
+<a href=# data-toggle=dropdown class=dropdown-toggle>
+<span>Contributing</span>
+<b class=caret></b>
+</a>
+<ul class=dropdown-menu>
+<li><a href=/cognicrypt/contributing#bugs>Bugs and Feature Requests</a> </li>
+<li><a href=/cognicrypt/contributing#code>Code Contributions</a> </li>
+<li><a href=/cognicrypt/contributing#prim>Cryptographic Primitives</a> </li>
+<li><a href=/cognicrypt/contributing#tasks>Cryptographic Tasks</a> </li>
+</ul>
+</li>
+<li>
+<a href=/cognicrypt/news/>
+News
+</a>
+</li>
+<li class="dropdown eclipse-more hidden-xs">
+<a data-toggle=dropdown class=dropdown-toggle role=button>More<b class=caret></b></a>
+<ul class=dropdown-menu>
+<li>
+<div class=yamm-content>
+<div class=row>
+<ul class="col-sm-8 list-unstyled">
+<li>
+<p><strong>Community</strong></p>
+</li>
+<li><a href=http://marketplace.eclipse.org>Marketplace</a></li>
+<li><a href=http://events.eclipse.org>Events</a></li>
+<li><a href=http://www.planeteclipse.org/>Planet Eclipse</a></li>
+<li><a href=https://www.eclipse.org/community/eclipse_newsletter/>Newsletter</a></li>
+<li><a href=https://www.youtube.com/user/EclipseFdn>Videos</a></li>
+<li><a href=https://blogs.eclipse.org>Blogs</a></li>
+</ul>
+<ul class="col-sm-8 list-unstyled">
+<li>
+<p><strong>Participate</strong></p>
+</li>
+<li><a href=https://bugs.eclipse.org/bugs/>Report a Bug</a></li>
+<li><a href=https://www.eclipse.org/forums/>Forums</a></li>
+<li><a href=https://www.eclipse.org/mail/>Mailing Lists</a></li>
+<li><a href=https://wiki.eclipse.org/>Wiki</a></li>
+<li><a href=https://wiki.eclipse.org/IRC>IRC</a></li>
+</ul>
+<ul class="col-sm-8 list-unstyled">
+<li>
+<p><strong>Eclipse IDE</strong></p>
+</li>
+<li><a href=https://www.eclipse.org/downloads>Download</a></li>
+<li><a href=https://help.eclipse.org>Documentation</a></li>
+<li><a href=https://www.eclipse.org/getting_started>Getting Started / Support</a></li>
+<li><a href=https://www.eclipse.org/contribute/>How to Contribute</a></li>
+<li><a href=https://www.eclipse.org/ide/>IDE and Tools</a></li>
+<li><a href=https://www.eclipse.org/forums/index.php/f/89/>Newcomer Forum</a></li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li style=min-width:100px;padding-top:12px;padding-left:50px;margin-left:-35px>
+<a href="https://twitter.com/cognicrypt?ref_src=twsrc%5Etfw" class=twitter-follow-button data-show-count=false data-show-screen-name=false></a><script async src=https://platform.twitter.com/widgets.js></script>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class=container>
+<div class=row>
+<div class="col-md-8 col-sm-12">
+<h1><span class=green>Eclipse</span> <span class=green>CogniCrypt</span></h1>
+<p>Eclipse CogniCrypt is an intelligent open-source platform ensuring the secure usage of crypto components.</p>
+</div>
+</div>
+</section>
+</header>
+<main class=main>
+<section class=first>
+<div class=container>
+<div class=row>
+<div class=col-md-10>
+<h3><span class=green>Contributors Guide</span></h3>
+</div>
+</div>
+</div>
+</section>
+<section class=second>
+<div class=container>
+<div class=col-md-10>
+<p>There are several opportunities for non-project-members to contribute to CogniCrypt:</p>
+<ul>
+<li>CogniCrypt users may contribute <strong>Bug Reports</strong> and <strong>Feature Requests</strong>,</li>
+<li>Regular developers who take interest in CogniCrypt may provide <strong>bug fixes</strong> and other kind of <strong>code contributions</strong>,</li>
+<li>Lastly, cryptography experts may share their own <strong>cryptographic components</strong> so that they can be used by CogniCrypt users.</li>
+</ul>
+<h1 id=bug-reports-and-feature-requests-a-namebugsa>Bug Reports and Feature Requests </h1>
+<p>In case you find a bug or have an idea for a feature, please check out <a href=https://github.com/CROSSINGTUD/CogniCrypt/issues>CogniCrypt&rsquo;s issue tracker</a>. If your problem or request is not yet being addressed there, please file a <a href=https://github.com/CROSSINGTUD/CogniCrypt/issues/new/choose>new issue</a>.</p>
+<h1 id=code-contributions-a-namecodea>Code Contributions </h1>
+<p>Any contributions - no matter whether they are bug fixes or new features - are very welcome. That being said, since CogniCrypt is an official Eclipse project, only official committers may contribute directly to the repository without any review. Commits from non-committers are possible, but must be reviewed by someone with committer status and come in a certain form, described by the <a href=https://www.eclipse.org/projects/handbook/#resources-commit>Eclipse manual</a>. In short, apart from the usual author tag, each commit needs to come with a signed-off-by tag at the bottom of the commit message. Pull requests that contain commits from non-committers not following this structure may not be accepted.
+For that matter the following steps must be done:</p>
+<ol>
+<li>Create an account on <a href=https://accounts.eclipse.org/>Eclipse Foundation</a> with the same E-mail address as your Git account.</li>
+<li>Complete the form and apply for an ECA license for your account.</li>
+<li>Sign each commit with your e-mail address “git commit -s -m “….”.</li>
+</ol>
+<p>For more information please check <a href=https://wiki.eclipse.org/Development_Resources/Contributing_via_Git>this</a>.</p>
+<p>Note: Regular long-time contributors who wish to continue contributing may apply to project-committer status.</p>
+<h1 id=cryptographic-components>Cryptographic Components</h1>
+<p>In general, crypto experts can contribute in two ways. First, they can contribute support for new cryptographic primitives (e.g., encryption schemes, key agreement algorithms, digital signature algorithms). Second, they can integrate new cryptographic use cases for CogniCrypt to offer to the users for code generation.</p>
+<p>In the context of CogniCrypt, these use cases are called <strong>tasks</strong>. Examples for cryptographic tasks that CogniCrypt already supports include: <strong>file encryption</strong>, <strong>communication over secure channel</strong>, and <strong>user authentication mechanisms</strong>. Depending on how a task is integrated, it can use primitives that have been integrated before. However primitives are not directly exposed to the end user. For easier distinction, this guide separates:</p>
+<ul>
+<li>Contributing crypto experts into: <strong>primitives developers</strong> and <strong>task developers</strong>.</li>
+<li>CogniCrypt users are being refered to as <strong>developers</strong>.</li>
+</ul>
+<p>In order to integrate a new primitive/task, two components need to be provided:</p>
+<ul>
+<li>Implementation</li>
+<li>Usage rules</li>
+</ul>
+<p>The implementation should encompass the full functionality of the primitive/task. To both <a href=../documentation/code-analysis>prevent developers from misusing a primitive/task</a> and <a href=../documentation/code-generation>facilitate the code generation for tasks</a>, usage rules describe how a task and/or a primitive is supposed to be used.</p>
+<h2 id=integrating-primitives-a-nameprima>Integrating Primitives </h2>
+<h3 id=implementation>Implementation:</h3>
+<p>Primitives need to be implemented as <a href=https://docs.oracle.com/javase/9/security/howtoimplaprovider.htm#JSSEC-GUID-C485394F-08C9-4D35-A245-1B82CDDBC031>Cryptographic Service Providers (CSP)</a> in Java. The JDK does not simply provide a set of implementations of cryptographic primitives to its users. Instead, a set of standardized and algorithm-specific interfaces is provided by the <a href=https://docs.oracle.com/javase/9/security/java-cryptography-architecture-jca-reference-guide.htm#JSSEC-GUID-2BCFDD85-D533-4E6C-8CE9-29990DEB0190>Java Cryptography Architecture(JCA)</a>. These interfaces must then be implemented by CSPs in order to provide cryptographic primitives to an application developer. With this design, the architecture around cryptography is made both independent of algorithms and implementations, as well as easily extensible. It enables primitives developers to implement their own algorithms as CSPs and plug them into the JCA. One CSP may include multiple primitives of multiple algorithm types.</p>
+<p>The JCA comes with a <a href=https://docs.oracle.com/javase/9/security/oracleproviders.htm#JSSEC-GUID-FE2D2E28-C991-4EF9-9DBE-2A4982726313>number of default providers</a> that implement the most common cryptographic algorithms in several configurations. <a href=https://www.bouncycastle.org/java.html>BouncyCastle</a>, another cryptographic library for Java, can also be used <a href=https://www.bouncycastle.org/wiki/display/JA1/Provider+Installation>as a CSP</a>. It implements a wide range of cryptographic algorithms and configurations, including the ones implemented by the default CSPs.</p>
+<p>During runtime, the Java Virtual Machine (JVM) maintains an ordered list of all plugged-in CSPs. As illustrated in the figure below, when an algorithm in a certain configuration is requested by some application code, the JVM iterates through the list and asks each provider if it supports the requested algorithm and configuration. In case several CSPs support the same configuration, the implementation of the first CSP in the list to support the configuration is selected.</p>
+<p><img src=https://docs.oracle.com/javase/9/security/img/architecture-service-provider-interface.gif alt="JCA plug and play"></p>
+<h3 id=usage-rules>Usage Rules:</h3>
+<p>Furthermore, developers of primitives should provide usage rules for their CSP. Any component may be misused and each and every such misuse within a security context leads to a potential security vulnerability. To illustrate the necessity for such rules, consider the following two examples. The code snippet in the Listing below is a simple example of a symmetric encryption using the JCA. The call in <em>Line 2</em> instantiates an object of class <code>Cipher</code>, which is using the symmetric block cipher <strong>AES</strong>. Although not obvious at first glance, method <code>getInstance()</code> does in fact not expect a single algorithm, but instead a<code>transformation</code> consisting of <strong>cipher</strong>, <strong>mode of operation</strong> and <strong>padding scheme</strong>. If the latter two are not provided by the developer (as in the code snippet below), the exact behaviour depends on the selected CSP. The default CSP of the JCA selects ECB as mode of operation by default. Unfortunately, in ECB mode, identical plaintext blocks are encrypted to identical ciphertext blocks. Consequently, any encryption of more than one block using this configuration is deemed insecure. To prevent such misuses, contributors may specify how to use their CSP correctly and securely.</p>
+<pre><code>public byte[] encrypt(byte[] secret, SecretKey key) {
+    Cipher ciph = new Cipher.getInstance(&quot;AES&quot;); 
+    ciph.init(Cipher.Encrypt_Mode, key);
+    return ciph.doFinal(secret);
+}
+</code></pre>
+<p>The usage rules must be provided in the definition language CrySL. CrySL alows a primitives developer to specify how their CSP should be used. Please refer to the <a href=../documentation/crysl>CrySL documentation</a> for further reference.</p>
+<h2 id=integrating-tasks-a-nametasksa>Integrating Tasks </h2>
+<p>Tasks are the main way application developers using CogniCrypt interact with the tool. When a user wants to implement a cryptographic task (e.g., communicate over a secure channel, encrypt data using a password), they can open the tool and select the respective task. CogniCrypt then guides them through a set of questions, lets them select one combination of algorithms and algorithm configurations, and generates the appropriate code.</p>
+<p>For this to work properly, task developers are required to contribute three components. In addition to the two general components - implementation and CrySL rules - they also have to provide the high-level questions that CogniCrypt asks the user in the beginning to configure the generated code. To simplify the extension of the model and the development of the questions, these steps may be conducted collaboratively with the CogniCrypt maintainers. Shape and form of all of these components depend on the exact way the task is being integrated.</p>
+<h3 id=implementation-1>Implementation</h3>
+<p>The implementation for a task may be provided to CogniCrypt as source code or a jar file. In this case, application developers get direct access to the code. If task developers do not wish to share the source code, they may provide access to the task&rsquo;s functionality indirectly through an API. Suppose a task developer wants to offer long-term document archiving as a cryptographic task in CogniCrypt. An archive requires the documents to be stored on a hard-disk. To not require the user to manage these files on their own, the task developer offers their archive as a web service that stores the documents on their server. In this case, the task developer does not have to provide any implementation directly to CogniCrypt. A task developer may choose to let the application developer configure the task in terms of used algorithms among other things. This configuration is done through the dialogue system after the CogniCrypt user selects a task they want to implement.</p>
+<h3 id=usage-rules-1>Usage Rules</h3>
+<p>Task developers must further provide usage rules for this component. CogniCrypt then automatically and continuously applies static analyses based on these rules in the background to ensure the code stays secure. These usage rules have to be provided in the specification language <a href=../documentation/crysl>CrySL</a>.</p>
+<h3 id=configuration-questions>Configuration Questions</h3>
+<p>Lastly, if developers want to allow the end user of CogniCrypt to configure their task implementation, they are also required to provide the questions CogniCrypt can ask the user. These questions may influence the generated code as well as the involved usage rules.</p>
+</div>
+</div>
+</section>
+</main>
+<footer id=solstice-footer>
+<div class=container>
+<div class=row>
+<section class="col-sm-3 hidden-print" id=footer-eclipse-foundation>
+<h2 class=section-title style=color:#fff>Eclipse Foundation</h2>
+<ul class=nav>
+<li><a href=https://www.eclipse.org/org/>About Us</a></li>
+<li><a href=https://www.eclipse.org/org/foundation/contact.php>Contact
+Us</a></li>
+<li><a href=https://www.eclipse.org/donate>Donate</a></li>
+<li><a href=https://www.eclipse.org/org/documents/>Governance</a></li>
+<li><a href=https://www.eclipse.org/artwork/>Logo and
+Artwork</a></li>
+<li><a href=https://www.eclipse.org/org/foundation/directors.php>Board of Directors</a></li>
+</ul>
+</section>
+<section class="col-sm-3 hidden-print" id=footer-legal>
+<h2 class=section-title style=color:#fff>Legal</h2>
+<ul class=nav>
+<li><a href=https://www.eclipse.org/legal/privacy.php>Privacy
+Policy</a></li>
+<li><a href=https://www.eclipse.org/legal/termsofuse.php>Terms
+of Use</a></li>
+<li><a href=https://www.eclipse.org/legal/copyright.php>Copyright
+Agent</a></li>
+<li><a href=https://www.eclipse.org/legal/epl-2.0/>Eclipse
+Public License</a></li>
+<li><a href=https://www.eclipse.org/legal/>Legal Resources
+</a></li>
+</ul>
+</section>
+<section class="col-sm-3 hidden-print" id=footer-useful-links>
+<h2 class=section-title style=color:#fff>Useful Links</h2>
+<ul class=nav>
+<li><a href=https://bugs.eclipse.org/bugs/>Report a Bug</a></li>
+<li><a href=//help.eclipse.org/>Documentation</a></li>
+<li><a href=https://www.eclipse.org/contribute/>How to
+Contribute</a></li>
+<li><a href=https://www.eclipse.org/mail/>Mailing Lists</a></li>
+<li><a href=https://www.eclipse.org/forums/>Forums</a></li>
+<li><a href=//marketplace.eclipse.org>Marketplace</a></li>
+</ul>
+</section>
+<section class="col-sm-3 hidden-print" id=footer-other>
+<h2 class=section-title style=color:#fff>Other</h2>
+<ul class=nav>
+<li><a href=https://www.eclipse.org/ide/>IDE and Tools</a></li>
+<li><a href=https://www.eclipse.org/projects>Community of
+Projects</a></li>
+<li><a href=https://www.eclipse.org/org/workinggroups/>Working
+Groups</a></li>
+<li><a href=https://www.eclipse.org/org/research/>Research@Eclipse</a></li>
+<li><a href=https://status.eclipse.org>Service Status</a></li>
+</ul>
+</section>
+<div class="col-sm-12 margin-top-20">
+<div class=row>
+<div id=copyright class=col-md-8>
+<p id=copyright-text style=color:#fff>Copyright © Eclipse Foundation, Inc. All
+Rights Reserved.</p>
+</div>
+<div class="col-md-4 social-media">
+<ul class="list-inline text-right">
+<li><a class="social-media-link fa-stack fa-lg" href=https://twitter.com/cognicrypt> <i class="fa fa-circle-thin fa-stack-2x"></i> <i class="fa fa-twitter fa-stack-1x"></i>
+</a></li>
+<li><a class="social-media-link fa-stack fa-lg" href=https://www.youtube.com/channel/UCNKzeZzhIMOhWm9eqlP15kw> <i class="fa fa-circle-thin fa-stack-2x"></i> <i class="fa fa-youtube fa-stack-1x"></i>
+</a></li>
+<li><a class="social-media-link fa-stack fa-lg" href=https://www.linkedin.com/company/eclipse-foundation> <i class="fa fa-circle-thin fa-stack-2x"></i> <i class="fa fa-linkedin fa-stack-1x"></i>
+</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<script src=https://www.eclipse.org/cognicrypt/assets/js/main.js></script>
+<script src=js/shuffle.js></script>
+<script src=js/index.js></script>
+</body>
+</html>
